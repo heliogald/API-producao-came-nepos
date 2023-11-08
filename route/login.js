@@ -5,11 +5,11 @@ const jwt = require('jsonwebtoken');
 
 // Rota para fazer o login
 router.post('/login', (req, res) => {
-  const { username, password } = req.body;
+  const { email, senha } = req.body;
 
   db.query(
-    'SELECT * FROM usuarios WHERE username = ?',
-    [username],
+    'SELECT * FROM usuarios WHERE email = ?',
+    [email],
     (err, results) => {
       if (err) {
         res.status(500).json({ message: 'Erro no servidor' });

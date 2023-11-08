@@ -4,13 +4,13 @@ import { getItens, addItens, updateItens, deleteItens } from "../controllers/ite
 
 const router = express.Router();
 
-router.get("/", getItens);
+router.get("/item", getItens);
 
-router.post("/", addItens);
+router.post("/item", addItens);
 
-router.put("/:id", updateItens);
+router.put("/item:id", updateItens);
 
-router.delete("/:id", deleteItens);
+router.delete("/item:id", deleteItens);
 
 
 export default router;
